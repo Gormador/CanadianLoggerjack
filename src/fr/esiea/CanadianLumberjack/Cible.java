@@ -8,7 +8,7 @@ package fr.esiea.CanadianLumberjack;
  *
  * Toute cible doit respecter cette interface.
  */
-public abstract class Cible {
+public interface Cible {
 
 	
 	/**

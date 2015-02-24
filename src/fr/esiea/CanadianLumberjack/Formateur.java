@@ -7,7 +7,7 @@ package fr.esiea.CanadianLumberjack;
  * Formateur de message.
  *
  */
-public abstract class Formateur {
+public abstract interface Formateur {
 
 	/**
 	 * Formate un message de type <code>ERROR</code>.
