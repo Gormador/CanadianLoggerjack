@@ -14,8 +14,6 @@ public class CibleConsole implements Cible {
 	 */
 	@Override
 	public void record(String message) {
-		// TODO Auto-generated method stub
-
 	}
 
 }
