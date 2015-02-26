@@ -6,15 +6,15 @@ package fr.esiea.CanadianLumberjack;
 import java.io.File;
 
 /**
- * Classe de configuration
+ * Configuration Class
  *
  */
 public class Configuration {
 
 	/**
-	 * Constructeur avec les valeurs par défaut.
-	 * Les paramètres par défaut sont :
-	 * Pour toutes les classes, errorlevel <code>ERROR</code>, cible <code>CibleConsole</code>
+	 * Constructor with default values
+	 * Default parameters are:
+	 * For every class, errorlevel <code>ERROR</code>, target <code>TargetConsole</code>
 	 *  
 	 */
 	public Configuration(){
@@ -22,7 +22,7 @@ public class Configuration {
 	}
 	
 	/**
-	 * Utilise la configuration contenue dans le fichier properties passé en paramètre
+	 * Uses the configuration specified in the properties file in parameter
 	 * 
 	 * DOCUMENTATION DU FICHIER PROPERTIES :
 	 * à faire
@@ -39,13 +39,13 @@ public class Configuration {
 	}
 	
 	/**
-	 * Ajoute une cible à une classe.
-	 * L'utiliser pour la première fois écrase la valeur par défaut.
+	 * Add a target to a class
+	 * Using it for the first time crushed the default value
 	 * 
 	 * @param classe
 	 * @param cible
 	 */
-	public void ajouterCible(Class classe, Cible cible){
+	public void ajouterCible(Class classe, Target cible){
 		/* A DEFINIR */
 	}
 }
