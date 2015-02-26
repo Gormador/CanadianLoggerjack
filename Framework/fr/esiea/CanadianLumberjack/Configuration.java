@@ -27,8 +27,7 @@ public class Configuration {
 	 * DOCUMENTATION DU FICHIER PROPERTIES :
 	 * à faire
 	 * 
-	 * @param config
-	 * @param classe
+	 * @param configFile
 	 */
 	public Configuration(File configFile)/* throws FileException, BadConfigException */{
 		/* A DEFINIR */
@@ -44,9 +43,9 @@ public class Configuration {
 	 * L'utiliser pour la première fois écrase la valeur par défaut.
 	 * 
 	 * @param classe
-	 * @param cilbe
+	 * @param cible
 	 */
-	public void ajouterCible(Class classe, Cible cilbe){
+	public void ajouterCible(Class classe, Cible cible){
 		/* A DEFINIR */
 	}
 }

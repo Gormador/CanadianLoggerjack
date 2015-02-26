@@ -14,7 +14,6 @@ public class LoggerFactory {
 	/**
 	 * Instancie un LoggerFactory avec la configuration passée en paramètre.
 	 * @param config
-	 * @param classe
 	 */
 	public LoggerFactory(Configuration config){
 		
@@ -28,8 +27,8 @@ public class LoggerFactory {
 	 * Retourne le <code>Logger</code>, configuré pour la classe donnée en paramètre selon les configurations.
 	 * 
 	 * 
-	 * @param classe
-	 * @return
+	 * @param classe The specified class
+	 * @return a logger instanciated for the specified class
 	 */
 	public Logger getLogger(Class classe){
 		
