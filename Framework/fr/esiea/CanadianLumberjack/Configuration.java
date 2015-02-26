@@ -46,7 +46,8 @@ public class Configuration {
 	 * DOCUMENTATION DU FICHIER PROPERTIES :
 	 * TODO
 	 * 
-	 * @param configFile
+	 * @param configFile The configuration file.
+	 * @throws FileNotFoundException Throws an exception if it is raised when opening the file.
 	 */
 	public Configuration(File configFile) throws FileNotFoundException /*, BadConfigException */{
 		/* A DEFINIR */
