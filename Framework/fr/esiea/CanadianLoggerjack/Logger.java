@@ -3,8 +3,6 @@
  */
 package fr.esiea.CanadianLoggerjack;
 
-import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 
 import static fr.esiea.CanadianLoggerjack.ErrorLevel.*;
@@ -37,7 +35,10 @@ public class Logger {
 	 * @param message The message to be logged
 	 */
 	public void error(String message){
-		// TODO à implémenter 
+		if(this.errLevel.compareTo(ERROR)>=0){
+			writeMessage(this.formator.formatError(message));
+		}
+		 
 	}
 	
 	/**
@@ -46,7 +47,9 @@ public class Logger {
 	 * @param message The message to be logged
 	 */
 	public void debug(String message){
-		// TODO à implémenter
+		if(this.errLevel.compareTo(DEBUG)>=0){
+			writeMessage(this.formator.formatDebug(message));
+		}
 	}
 	
 	
@@ -56,6 +59,14 @@ public class Logger {
 	 * @param message The message to be logged
 	 */
 	public void info(String message){
-		// TODO à implémenter
+		if(this.errLevel.compareTo(INFO)>=0){
+			writeMessage(this.formator.formatInfo(message));
+		}
+	}
+	
+	private void writeMessage(String formatedMessage){
+		for(Target t : this.targets){
+			t.record(formatedMessage);
+		}
 	}
 }
