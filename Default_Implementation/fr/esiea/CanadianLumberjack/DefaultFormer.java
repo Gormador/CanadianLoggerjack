@@ -4,11 +4,10 @@
 package fr.esiea.CanadianLumberjack;
 
 /**
- * Formateur par défaut.
- * Affiche la date/heure, le nom du loggeur, le niveau d'erreur du message et le message.
+ * Displays the date / time, the name of the logger, the message level error and the message.
  *
  */
-public class FormateurDefaut implements Formateur {
+public class DefaultFormer implements Formateur {
 
 	/* (non-Javadoc)
 	 * @see fr.esiea.CanadianLumberjack.Formateur#formatError(java.lang.String)
@@ -34,6 +33,11 @@ public class FormateurDefaut implements Formateur {
 	@Override
 	public String formatDebug(String message) {
 		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	private String formatCommon(String message){
+		
 		return null;
 	}
 

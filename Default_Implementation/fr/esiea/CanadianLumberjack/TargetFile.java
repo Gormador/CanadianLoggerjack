@@ -8,10 +8,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * Enregistre les messages dans un fichier
+ * Save messages in a file
  *
  */
-public class CibleFichier implements Cible {
+public class TargetFile implements Target {
 
 	/* (non-Javadoc)
 	 * @see fr.esiea.CanadianLumberjack.Cible#record(java.lang.String)
@@ -19,8 +19,8 @@ public class CibleFichier implements Cible {
 	
 	private File file;
 	
-	CibleFichier(){
-		this.file = new File("fichier.txt");
+	TargetFile(){
+		this.file = new File("loggerFile.txt");
 	}
 	
 	@Override

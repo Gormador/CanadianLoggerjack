@@ -14,7 +14,7 @@ import java.util.Date;
  * When the file reaches a certain size, a new file is created automatically.
  * 
  */
-public class TargetRolloverFile implements Cible{
+public class TargetRolloverFile implements Target{
 
 
 	private File file;

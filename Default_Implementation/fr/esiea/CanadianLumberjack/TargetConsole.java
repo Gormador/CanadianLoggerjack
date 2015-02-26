@@ -3,15 +3,12 @@
  */
 package fr.esiea.CanadianLumberjack;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 
 /**
- * Affiche les messages en console
+ * Displays messages in the console
  *
  */
-public class CibleConsole implements Cible {
+public class TargetConsole implements Target {
 
 	/* (non-Javadoc)
 	 * @see fr.esiea.CanadianLumberjack.Cible#record(java.lang.String)
