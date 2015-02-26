@@ -78,7 +78,7 @@ public class Configuration {
 	 * @param target The target to add to the specified class
 	 */
 	@SuppressWarnings("rawtypes")
-	public void ajouterCible(Class sClass, Target target){
+	public void addTarget(Class sClass, Target target){
 		
 		if(targets.containsKey(sClass)){
 			targets.get(sClass).add(target);
