@@ -3,6 +3,8 @@
  */
 package fr.esiea.CanadianLoggerjack;
 
+import java.util.List;
+
 /**
  * Classe Logger.
  * Seul un <code>LoggerFactory</code> peut instancier cette classe.
@@ -11,12 +13,16 @@ package fr.esiea.CanadianLoggerjack;
  */
 public class Logger {
 	
+	private Formator formator;
+	private List<Target> targets;
+	private ErrorLevel errLevel;
 	
 	
-	// pas de public/private ou autre = default => seul le factory (du mï¿½me package) peut appeler le constructeur.
 	
-	Logger(/* A DEFINIR */){
-		// TODO à implémenter
+	Logger(Formator formator, List<Target> targets, ErrorLevel errLevel){
+		this.formator = formator;
+		this.targets = targets;
+		this.errLevel = errLevel;
 	}
 	
 	
