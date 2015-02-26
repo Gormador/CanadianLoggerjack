@@ -4,18 +4,28 @@
 package fr.esiea.CanadianLumberjack;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.LinkedList;
 
 /**
- * Configuration Class
+ * Configure a <code>LoggerFactory</code>
  *
+ *@see LoggerFactory
  */
 public class Configuration {
 
+	
+	@SuppressWarnings("rawtypes")
+	private HashMap<Class, LinkedList<Target>> targets;
+	
 	/**
-	 * Constructor with default values
-	 * Default parameters are:
-	 * For every class, errorlevel <code>ERROR</code>, target <code>TargetConsole</code>
+	 * Constructor with default parameters.
+	 * <br>Default parameters are:
+	 * <br>For each class :
+	 * <br>errorlevel: <code>ERROR</code>
+	 * <br>target: <code>TargetConsole</code>
 	 *  
+	 *  @see TargetConsole
 	 */
 	public Configuration(){
 		
@@ -35,17 +45,27 @@ public class Configuration {
 		/* le fileexception est à redéfinir (il faut jeter une exception s'il y a un souci avec le fichier)
 		 * et le badconfigexceptin est à créer */
 		
-		 
 	}
 	
 	/**
 	 * Add a target to a class
-	 * Using it for the first time crushed the default value
+	 * Using it for the first time overwrite the default value
 	 * 
-	 * @param classe
-	 * @param cible
+	 * 
+	 * @param sClass The specified class
+	 * @param target The target to add to the specified class
 	 */
-	public void ajouterCible(Class classe, Target cible){
-		/* A DEFINIR */
+	@SuppressWarnings("rawtypes")
+	public void ajouterCible(Class sClass, Target target){
+		
+		if(targets.containsKey(sClass)){
+			targets.get(sClass).add(target);
+		}
+		else{
+			LinkedList<Target> l = new LinkedList<Target>();
+			l.add(target);
+			targets.put(sClass, l);
+		}
+			/* A DEFINIR */
 	}
 }
