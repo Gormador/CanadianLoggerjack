@@ -3,6 +3,9 @@
  */
 package fr.esiea.CanadianLoggerjack;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+
 
 /**
  * 
@@ -10,8 +13,12 @@ package fr.esiea.CanadianLoggerjack;
  */
 public class LoggerFactory {
 	
-	// TODO Ajouter attribut de classe privé pour stocker configuration
-	
+	@SuppressWarnings("rawtypes")
+	private HashMap<Class, LinkedList<Target>> targets;
+	@SuppressWarnings("rawtypes")
+	private HashMap<Class, ErrorLevel> errLevels;
+	@SuppressWarnings("rawtypes")
+	private HashMap<Class, Formator> layouts;
 	
 	/**
 	 * Instantiate a <code>LoggerFactory</code> with the parameters specified in the properties file.
@@ -20,7 +27,9 @@ public class LoggerFactory {
 	 * @see Configuration
 	 */
 	public LoggerFactory(Configuration config){
-		//TODO après implémentation de la lecture des propriétés
+		this.targets = new HashMap<Class, LinkedList<Target>>(config.targets);
+		this.errLevels = new HashMap<Class, ErrorLevel>(config.errLevels);
+		this.layouts = new HashMap<Class, Formator>(config.layouts);
 	}
 	
 	
