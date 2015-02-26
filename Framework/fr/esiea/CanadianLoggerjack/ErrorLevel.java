@@ -5,9 +5,9 @@ package fr.esiea.CanadianLoggerjack;
  * 
  */
 enum ErrorLevel {
-	INFO,
-	DEBUG,
+	ERROR,
 	/* WARN, */
-	ERROR
+	DEBUG,
+	INFO
 
 }
