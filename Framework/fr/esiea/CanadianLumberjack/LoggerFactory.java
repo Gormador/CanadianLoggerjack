@@ -3,7 +3,6 @@
  */
 package fr.esiea.CanadianLumberjack;
 
-import java.io.File;
 
 /**
  * 
