@@ -13,37 +13,49 @@ import fr.esiea.CanadianLoggerjack.Formator;
  *
  */
 public class DefaultFormator implements Formator {
-
-	/* (non-Javadoc)
-	 * @see fr.esiea.CanadianLumberjack.Formateur#formatError(java.lang.String)
-	 */
 	
 	private String loggerName;
 	
+	/**
+	 * Create a formator, with the name of the logger
+	 * @param loggerName The name of the logger
+	 */
 	DefaultFormator(String loggerName){
 		this.loggerName = loggerName;
 	}
+	
+	/**
+	 * Return the format for the error level 'ERROR'
+	 * @param message The message to display
+	 */
 	@Override
 	public String formatError(String message) {
 		return formatCommon(message, "ERROR");
 	}
-
-	/* (non-Javadoc)
-	 * @see fr.esiea.CanadianLumberjack.Formateur#formatInfo(java.lang.String)
+	
+	/**
+	 * Return the format for the error level 'INFO'
+	 * @param message The message to display
 	 */
 	@Override
 	public String formatInfo(String message) {
 		return formatCommon(message, "INFO");
 	}
 
-	/* (non-Javadoc)
-	 * @see fr.esiea.CanadianLumberjack.Formateur#formatDebug(java.lang.String)
+	/**
+	 * Return the format for the error level 'DEBUG'
+	 * @param message The message to display
 	 */
 	@Override
 	public String formatDebug(String message) {
 		return formatCommon(message, "DEBUG");
 	}
 	
+	/**
+	 * Return the format for the error in parameter
+	 * @param message The message to display
+	 * @param errorLevel The error level of the message
+	 */
 	private String formatCommon(String message, String errorLevel){
 		String date;
 		date = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date()).toString();
