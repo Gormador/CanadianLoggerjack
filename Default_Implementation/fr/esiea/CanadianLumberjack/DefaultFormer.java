@@ -3,6 +3,9 @@
  */
 package fr.esiea.CanadianLumberjack;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Displays the date / time, the name of the logger, the message level error and the message.
  *
@@ -12,10 +15,15 @@ public class DefaultFormer implements Formateur {
 	/* (non-Javadoc)
 	 * @see fr.esiea.CanadianLumberjack.Formateur#formatError(java.lang.String)
 	 */
+	
+	private String loggerName;
+	
+	DefaultFormer(String loggerName){
+		this.loggerName = loggerName;
+	}
 	@Override
 	public String formatError(String message) {
-		// TODO Auto-generated method stub
-		return null;
+		return formatCommon(message, "ERROR");
 	}
 
 	/* (non-Javadoc)
@@ -23,8 +31,7 @@ public class DefaultFormer implements Formateur {
 	 */
 	@Override
 	public String formatInfo(String message) {
-		// TODO Auto-generated method stub
-		return null;
+		return formatCommon(message, "INFO");
 	}
 
 	/* (non-Javadoc)
@@ -32,13 +39,13 @@ public class DefaultFormer implements Formateur {
 	 */
 	@Override
 	public String formatDebug(String message) {
-		// TODO Auto-generated method stub
-		return null;
+		return formatCommon(message, "DEBUG");
 	}
 	
-	private String formatCommon(String message){
-		
-		return null;
+	private String formatCommon(String message, String errorLevel){
+		String date;
+		date = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date()).toString();
+		return(date + "\t" + this.loggerName + "\t" + errorLevel + "\t" + message);
 	}
 
 }
