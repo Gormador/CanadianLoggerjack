@@ -1,13 +1,15 @@
 /**
  * 
  */
-package fr.esiea.CanadianLumberjack;
+package fr.esiea.CanadianLoggerjack.impl;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import fr.esiea.CanadianLoggerjack.Target;
 
 /**
  * Save messages in a rollover file.
@@ -35,6 +37,7 @@ public class TargetRolloverFile implements Target{
 	
 	/**
 	 * Create a rollover file with a default maxSize and a chosen name
+	 * 
 	 * @param name The name of the file
 	 */
 	TargetRolloverFile(String name){
@@ -45,6 +48,7 @@ public class TargetRolloverFile implements Target{
 	
 	/**
 	 * Create a rollover file with a chosen maxSize and a default name
+	 * 
 	 * @param maxSize The maximum size of the file
 	 */
 	TargetRolloverFile(int maxSize){
@@ -55,6 +59,7 @@ public class TargetRolloverFile implements Target{
 	
 	/**
 	 * Create a rollover file with a chosen maxSize and a chosen name
+	 * 
 	 * @param name The name of the file
 	 * @param maxSize The maximum size of the file
 	 */
@@ -67,6 +72,7 @@ public class TargetRolloverFile implements Target{
 	
 	/**
 	 * Save a message in a rollover file
+	 * 
 	 * @param message The message that will be saved in the rollover file
 	 */
 	@Override

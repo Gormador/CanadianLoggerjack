@@ -1,10 +1,12 @@
 /**
  * 
  */
-package fr.esiea.CanadianLumberjack;
+package fr.esiea.CanadianLoggerjack.impl;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import fr.esiea.CanadianLoggerjack.Formator;
 
 /**
  * Displays the date / time, the name of the logger, the message level error and the message.

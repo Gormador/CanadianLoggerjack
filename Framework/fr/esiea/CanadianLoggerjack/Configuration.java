@@ -1,7 +1,7 @@
 /**
  * 
  */
-package fr.esiea.CanadianLumberjack;
+package fr.esiea.CanadianLoggerjack;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,6 +11,8 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Properties;
+
+import fr.esiea.CanadianLoggerjack.impl.TargetConsole;
 
 /**
  * Configure a <code>LoggerFactory</code>
@@ -29,6 +31,7 @@ public class Configuration {
 	
 	/**
 	 * Constructor with default parameters.
+	 * 
 	 * <br>Default parameters are:
 	 * <br>For each class :
 	 * <br>errorlevel: <code>ERROR</code>
@@ -44,33 +47,25 @@ public class Configuration {
 	 * Uses the configuration specified in the properties file in parameter
 	 * 
 	 * DOCUMENTATION DU FICHIER PROPERTIES :
-	 * TODO
+	 * TODO couplé à l'implémentation de la lecture des properties
 	 * 
 	 * @param configFile The configuration file.
 	 * @throws FileNotFoundException Throws an exception if it is raised when opening the file.
 	 */
-	public Configuration(File configFile) throws FileNotFoundException /*, BadConfigException */{
-		/* A DEFINIR */
+	public Configuration(File configFile) throws FileNotFoundException /* TODO, BadConfigException */{
 		
 		Properties props = new Properties();
 		InputStream is = null;
 		
 		is = new FileInputStream(configFile);
 		
-		// TODO  
-		
+		// TODO Load properties  
 		
 		try {
 			is.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-		/* le fileexception est à redéfinir (il faut jeter une exception s'il y a un souci avec le fichier)
-		 * et le badconfigexceptin est à créer */
 		
 	}
 	
@@ -93,7 +88,6 @@ public class Configuration {
 			l.add(target);
 			targets.put(sClass, l);
 		}
-			/* TODO */
 	}
 	
 	/**

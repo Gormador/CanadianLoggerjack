@@ -1,7 +1,7 @@
 /**
  * 
  */
-package fr.esiea.CanadianLumberjack;
+package fr.esiea.CanadianLoggerjack;
 
 /**
  * Message formator
@@ -11,6 +11,7 @@ public abstract interface Formator {
 
 	/**
 	 * Formats a message of type <code>ERROR</code>.
+	 * 
 	 * @param message The message that will be formated.
 	 * @return The formated string
 	 */
@@ -18,6 +19,7 @@ public abstract interface Formator {
 	
 	/**
 	 * Formats a message of type  <code>INFO</code>.
+	 * 
 	 * @param message The message that will be formated.
 	 * @return The formated string
 	 */
@@ -25,6 +27,7 @@ public abstract interface Formator {
 	
 	/**
 	 * Formats a message of type  <code>DEBUG</code>.
+	 * 
 	 * @param message The message that will be formated.
 	 * @return The formated string
 	 */

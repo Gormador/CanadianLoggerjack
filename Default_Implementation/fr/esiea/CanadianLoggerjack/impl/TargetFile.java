@@ -1,11 +1,13 @@
 /**
  * 
  */
-package fr.esiea.CanadianLumberjack;
+package fr.esiea.CanadianLoggerjack.impl;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+
+import fr.esiea.CanadianLoggerjack.Target;
 
 /**
  * Save messages in a file

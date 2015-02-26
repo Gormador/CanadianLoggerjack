@@ -1,7 +1,9 @@
 /**
  * 
  */
-package fr.esiea.CanadianLumberjack;
+package fr.esiea.CanadianLoggerjack.impl;
+
+import fr.esiea.CanadianLoggerjack.Target;
 
 
 /**
