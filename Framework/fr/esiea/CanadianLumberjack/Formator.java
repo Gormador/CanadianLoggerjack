@@ -4,13 +4,13 @@
 package fr.esiea.CanadianLumberjack;
 
 /**
- * Formateur de message.
+ * Message formator
  *
  */
-public abstract interface Formateur {
+public abstract interface Formator {
 
 	/**
-	 * Formate un message de type <code>ERROR</code>.
+	 * Formats a message of type <code>ERROR</code>.
 	 * @param message
 	 * @return
 	 */

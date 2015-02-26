@@ -10,7 +10,7 @@ import java.util.Date;
  * Displays the date / time, the name of the logger, the message level error and the message.
  *
  */
-public class DefaultFormer implements Formateur {
+public class DefaultFormer implements Formator {
 
 	/* (non-Javadoc)
 	 * @see fr.esiea.CanadianLumberjack.Formateur#formatError(java.lang.String)
