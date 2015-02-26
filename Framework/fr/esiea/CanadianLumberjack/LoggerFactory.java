@@ -11,11 +11,11 @@ package fr.esiea.CanadianLumberjack;
 public class LoggerFactory {
 	
 	/**
-	 * Instancie un LoggerFactory avec la configuration passée en paramètre.
+	 * Instanciate a <code>LoggerFactory</code> with the parameters specified in the properties file.
 	 * @param config
 	 */
 	public LoggerFactory(Configuration config){
-		
+		//TODO
 	}
 	
 	
@@ -23,15 +23,16 @@ public class LoggerFactory {
 	
 	
 	/**
-	 * Retourne le <code>Logger</code>, configuré pour la classe donnée en paramètre selon les configurations.
+	 * Instanciate a <code>Logger</code>, configured for the specified class regarding to the <code>Configuration</code> settings.
 	 * 
 	 * 
-	 * @param classe The specified class
-	 * @return a logger instanciated for the specified class
+	 * @param sClass The specified class
+	 * @return A logger instanciated for the specified class
 	 */
-	public Logger getLogger(Class classe){
+	@SuppressWarnings("rawtypes")
+	public Logger getLogger(Class sClass){
 		
-		/* A DEFINIR */
+		/* TODO A DEFINIR */
 		return null;
 	}
 	
