@@ -3,7 +3,11 @@
  */
 package fr.esiea.CanadianLoggerjack;
 
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+
+import static fr.esiea.CanadianLoggerjack.ErrorLevel.*;
 
 /**
  * Classe Logger.
@@ -16,6 +20,7 @@ public class Logger {
 	private Formator formator;
 	private List<Target> targets;
 	private ErrorLevel errLevel;
+	
 	
 	
 	
