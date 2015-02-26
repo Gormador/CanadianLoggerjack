@@ -17,14 +17,14 @@ public abstract interface Formator {
 	public abstract String formatError(String message);
 	
 	/**
-	 * Formate un message de type <code>INFO</code>.
+	 * Formats a message of type  <code>INFO</code>.
 	 * @param message
 	 * @return
 	 */
 	public abstract String formatInfo(String message);
 	
 	/**
-	 * Formate un message de type <code>DEBUG</code>.
+	 * Formats a message of type  <code>DEBUG</code>.
 	 * @param message
 	 * @return
 	 */
