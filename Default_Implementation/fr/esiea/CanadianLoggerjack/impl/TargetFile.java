@@ -10,16 +10,13 @@ import java.io.IOException;
 import fr.esiea.CanadianLoggerjack.Target;
 
 /**
- * Save messages in a file
- *
+ * Record the log into a file. 
+ * 
+ * @see Target
  */
 public class TargetFile implements Target {
 
-	/**
-	 * Record the log into a file. 
-	 * 
-	 * @see Target
-	 */
+	
 	
 	private File file;
 	
@@ -27,7 +24,7 @@ public class TargetFile implements Target {
 	 * Create a file with default name: <code>loggerFile.log</code>
 	 * 
 	 */
-	TargetFile(){
+	public TargetFile(){
 		this.file = new File("loggerFile.log");
 	}
 	
@@ -35,7 +32,7 @@ public class TargetFile implements Target {
 	 * Create a file with the specified name.
 	 * @param name The file will be <code>name.log</code>
 	 */
-	TargetFile(String name){
+	public TargetFile(String name){
 		this.file = new File(name + ".log");
 	}
 	

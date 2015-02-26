@@ -20,7 +20,7 @@ public class DefaultFormator implements Formator {
 	 * Create a formator, with the name of the logger
 	 * @param loggerName The name of the logger
 	 */
-	DefaultFormator(String loggerName){
+	public DefaultFormator(String loggerName){
 		this.loggerName = loggerName;
 	}
 	

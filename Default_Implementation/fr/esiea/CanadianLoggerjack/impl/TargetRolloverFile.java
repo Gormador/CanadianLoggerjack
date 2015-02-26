@@ -29,7 +29,7 @@ public class TargetRolloverFile implements Target{
 	 * <br> name = rollover_file
 	 * <br> max size of the file = 10MB (10 * 1024)
 	 */
-	TargetRolloverFile(){
+	public TargetRolloverFile(){
 		this.maxSize = 10 * 1024;
 		this.name = "rollover_file";
 		file = new File(name + ".txt");
@@ -40,7 +40,7 @@ public class TargetRolloverFile implements Target{
 	 * 
 	 * @param name The name of the file
 	 */
-	TargetRolloverFile(String name){
+	public TargetRolloverFile(String name){
 		this.maxSize = 10 * 1024;
 		this.name = name;
 		file = new File(name + ".txt");
@@ -51,7 +51,7 @@ public class TargetRolloverFile implements Target{
 	 * 
 	 * @param maxSize The maximum size of the file
 	 */
-	TargetRolloverFile(int maxSize){
+	public TargetRolloverFile(int maxSize){
 		this.maxSize = maxSize * 1024;
 		this.name = "rollover_file";
 		file = new File(name + ".txt");
@@ -63,7 +63,7 @@ public class TargetRolloverFile implements Target{
 	 * @param name The name of the file
 	 * @param maxSize The maximum size of the file
 	 */
-	TargetRolloverFile(String name, int maxSize){
+	public TargetRolloverFile(String name, int maxSize){
 		this.maxSize = maxSize * 1024;
 		this.name = name;
 		file = new File(name + ".txt");

@@ -15,6 +15,11 @@ import fr.esiea.CanadianLoggerjack.Target;
  */
 public class TargetConsole implements Target {
 	
+	
+	public TargetConsole() {
+		
+	}
+	
 	/**
 	 * Displays the message in the console
 	 * @param message The message that will be display
