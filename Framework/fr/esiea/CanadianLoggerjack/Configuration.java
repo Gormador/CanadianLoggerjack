@@ -22,12 +22,14 @@ import fr.esiea.CanadianLoggerjack.impl.TargetConsole;
 public class Configuration {
 
 	
+	@SuppressWarnings("rawtypes") 
+	HashMap<Class, LinkedList<Target>> targets;
+	
 	@SuppressWarnings("rawtypes")
-	private HashMap<Class, LinkedList<Target>> targets;
+	HashMap<Class, ErrorLevel> errLevels;
+	
 	@SuppressWarnings("rawtypes")
-	private HashMap<Class, ErrorLevel> errLevels;
-	@SuppressWarnings("rawtypes")
-	private HashMap<Class, Formator> layouts;
+	HashMap<Class, Formator> layouts;
 	
 	/**
 	 * Constructor with default parameters.
