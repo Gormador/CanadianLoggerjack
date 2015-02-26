@@ -11,6 +11,7 @@ import fr.esiea.CanadianLoggerjack.Target;
  * <br> This is the default target for a <code>Logger</code> when nothing is specified in the <code>Configuration</code>.
  *
  * @see Configuration
+ * @see Target
  */
 public class TargetConsole implements Target {
 	
