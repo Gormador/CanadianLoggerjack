@@ -15,31 +15,33 @@ import fr.esiea.CanadianLoggerjack.Target;
  */
 public class TargetFile implements Target {
 
-	/* (non-Javadoc)
-	 * @see fr.esiea.CanadianLumberjack.Cible#record(java.lang.String)
+	/**
+	 * Record the log into a file. 
+	 * 
+	 * @see Target
 	 */
 	
 	private File file;
 	
 	/**
-	 * Create a file with default name 'loggerFile.txt'
+	 * Create a file with default name: <code>loggerFile.log</code>
 	 * 
 	 */
 	TargetFile(){
-		this.file = new File("loggerFile.txt");
+		this.file = new File("loggerFile.log");
 	}
 	
 	/**
-	 * Create a file with a chosen name
-	 * @param name Name of the file
+	 * Create a file with the specified name.
+	 * @param name The file will be <code>name.log</code>
 	 */
 	TargetFile(String name){
-		this.file = new File(name + ".txt");
+		this.file = new File(name + ".log");
 	}
 	
 	/**
-	 * Save a message in a file
-	 * @param message The message that will be saved in the file
+	 * Append the message into the file.
+	 * @param message The message to be recorded
 	 */
 	@Override
 	public void record(String message) {
