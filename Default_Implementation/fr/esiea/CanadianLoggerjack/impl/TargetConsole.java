@@ -7,8 +7,10 @@ import fr.esiea.CanadianLoggerjack.Target;
 
 
 /**
- * Displays messages in the console
+ * Displays messages in the console.
+ * <br> This is the default target for a <code>Logger</code> when nothing is specified in the <code>Configuration</code>.
  *
+ * @see Configuration
  */
 public class TargetConsole implements Target {
 	
