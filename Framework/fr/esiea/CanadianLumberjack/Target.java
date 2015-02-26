@@ -12,8 +12,8 @@ public interface Target {
 
 	
 	/**
-	 * Cette méthode doit enregistrer le message selon le moyen implémenté par la classe.
-	 * @param message
+	 * This method must record the message on the medium.
+	 * @param message The message to be recorded.
 	 */
 	public abstract void record(String message);
 	

@@ -12,7 +12,8 @@ public class LoggerFactory {
 	
 	/**
 	 * Instanciate a <code>LoggerFactory</code> with the parameters specified in the properties file.
-	 * @param config
+	 * @param config The configuration for the LoggerFactory
+	 * @see Configuration
 	 */
 	public LoggerFactory(Configuration config){
 		//TODO

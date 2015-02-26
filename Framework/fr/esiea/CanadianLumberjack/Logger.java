@@ -19,16 +19,16 @@ public class Logger {
 	
 	
 	/**
-	 * Enregistre un message <code>ERROR</code>
-	 * @param message
+	 * Log an <code>ERROR</code> message
+	 * @param message The message to be logged
 	 */
 	public void error(String message){
 		/* A DEFINIR */
 	}
 	
 	/**
-	 * Enregistre un message <code>DEBUG</code>
-	 * @param message
+	 * Log a <code>DEBUG</code> message
+	 * @param message The message to be logged
 	 */
 	public void debug(String message){
 		/* A DEFINIR */
@@ -37,8 +37,8 @@ public class Logger {
 	
 	
 	/**
-	 * Enregistre un message <code>INFO</code>
-	 * @param message
+	 * Log an <code>INFO</code> message
+	 * @param message The message to be logged
 	 */
 	public void info(String message){
 		/* A DEFINIR */
