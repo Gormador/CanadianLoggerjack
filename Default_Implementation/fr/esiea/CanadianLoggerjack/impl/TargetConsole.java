@@ -11,10 +11,6 @@ import fr.esiea.CanadianLoggerjack.Target;
  *
  */
 public class TargetConsole implements Target {
-
-	/* (non-Javadoc)
-	 * @see fr.esiea.CanadianLumberjack.Cible#record(java.lang.String)
-	 */
 	
 	/**
 	 * Displays the message in the console
