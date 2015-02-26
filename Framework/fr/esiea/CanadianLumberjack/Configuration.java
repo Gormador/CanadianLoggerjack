@@ -4,8 +4,13 @@
 package fr.esiea.CanadianLumberjack;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Properties;
 
 /**
  * Configure a <code>LoggerFactory</code>
@@ -35,12 +40,29 @@ public class Configuration {
 	 * Uses the configuration specified in the properties file in parameter
 	 * 
 	 * DOCUMENTATION DU FICHIER PROPERTIES :
-	 * à faire
+	 * TODO
 	 * 
 	 * @param configFile
 	 */
-	public Configuration(File configFile)/* throws FileException, BadConfigException */{
+	public Configuration(File configFile) throws FileNotFoundException /*, BadConfigException */{
 		/* A DEFINIR */
+		
+		Properties props = new Properties();
+		InputStream is = null;
+		
+		is = new FileInputStream(configFile);
+		
+		// TODO  
+		
+		
+		try {
+			is.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
 		
 		/* le fileexception est à redéfinir (il faut jeter une exception s'il y a un souci avec le fichier)
 		 * et le badconfigexceptin est à créer */
