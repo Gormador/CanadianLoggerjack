@@ -14,6 +14,7 @@ public class FileTester {
 		
 		conf.setLevel(this.getClass(), ErrorLevel.DEBUG);
 		conf.addTarget(this.getClass(), new TargetFile());
+		conf.addTarget(this.getClass(), new TargetFile("customLog"));
 		
 		LoggerFactory lf = new LoggerFactory(conf);
 		
@@ -22,6 +23,5 @@ public class FileTester {
 		l.debug("DEBUG message to the console.");
 		l.info("INFO message to the console.");
 		l.error("ERRO message to the console.");
-	
 	}	
 }
