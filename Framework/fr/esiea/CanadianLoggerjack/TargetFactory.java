@@ -6,7 +6,7 @@ abstract class TargetFactory {
 	
 	/**
 	 * This is the default constructor for the factory.
-	 * Each custom target must provide a Factory to be built from a configuratin file.
+	 * Each custom target must provide a Factory to be built from a configuration file.
 	 * 
 	 */
 	public TargetFactory(){
@@ -19,6 +19,6 @@ abstract class TargetFactory {
 	 * @param props A properties objects containing all the properties specified in the config file.
 	 * @throws InvalidConfigurationException
 	 */
-	public abstract Target getTarget(Properties props) throws InvalidConfigurationException;
+	public abstract Target getTarget(String props) throws InvalidConfigurationException;
 	
 }
