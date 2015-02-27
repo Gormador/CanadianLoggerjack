@@ -6,6 +6,9 @@ package fr.esiea.CanadianLoggerjack;
 import java.util.HashMap;
 import java.util.LinkedList;
 
+import fr.esiea.CanadianLoggerjack.impl.DefaultFormator;
+import fr.esiea.CanadianLoggerjack.impl.TargetConsole;
+
 
 /**
  * 
@@ -26,6 +29,7 @@ public class LoggerFactory {
 	 * @param config The configuration for the LoggerFactory
 	 * @see Configuration
 	 */
+	@SuppressWarnings("rawtypes")
 	public LoggerFactory(Configuration config){
 		this.targets = new HashMap<Class, LinkedList<Target>>(config.targets);
 		this.errLevels = new HashMap<Class, ErrorLevel>(config.errLevels);
@@ -46,9 +50,24 @@ public class LoggerFactory {
 	@SuppressWarnings("rawtypes")
 	public Logger getLogger(Class sClass){
 		
-		// TODO à implémenter
+		LinkedList<Target> t;
+		ErrorLevel errLv;
+		Formator f;
 		
-		return null;
+		if(this.targets.containsKey(sClass)){
+			t =  this.targets.get(sClass);
+		}
+		else{
+			t= new LinkedList<Target>();
+			t.add(new TargetConsole());
+		}
+		
+		errLv = this.errLevels.containsKey(sClass) ? this.errLevels.get(sClass) : ErrorLevel.ERROR;
+		
+		f = this.layouts.containsKey(sClass) ? this.layouts.get(sClass) : new DefaultFormator(sClass.getName());;
+			
+		
+		return (new Logger(f, t, errLv));
 	}
 	
 }
