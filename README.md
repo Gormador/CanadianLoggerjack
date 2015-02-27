@@ -1,7 +1,5 @@
 # CanadianLoggerjack
 A logging system for Java applications.
-# CanadianLoggerjack
-A logging system for Java applications.
 
 # How to install
 Please feel free to clone this repository. This is an eclipse project, so you can add it to your favorite workspace.
