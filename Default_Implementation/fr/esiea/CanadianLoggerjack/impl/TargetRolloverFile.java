@@ -49,7 +49,7 @@ public class TargetRolloverFile implements Target{
 	/**
 	 * Create a rollover file with a chosen maxSize and a default name
 	 * 
-	 * @param maxSize The maximum size of the file
+	 * @param maxSize The maximum size of the file in kB.
 	 */
 	public TargetRolloverFile(int maxSize){
 		this.maxSize = maxSize * 1024;

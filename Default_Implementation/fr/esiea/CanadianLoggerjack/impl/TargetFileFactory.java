@@ -10,22 +10,22 @@ public class TargetFileFactory extends TargetFactory {
 		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * Create a TargetFile object.
-	 * 
-	 * @param props must be the filename
-	 * @see TargetFile
+	
+	/* (non-Javadoc)
+	 * @see fr.esiea.CanadianLoggerjack.TargetFactory#getTarget(java.lang.String)
 	 */
 	@Override
 	public Target getTarget(String props) throws InvalidConfigurationException {
+		
+		
+		
 		return(new TargetFile(props));
 		
 	}
 	
-	/**
-	 * Create a TargetFile object with the default name
-	 * 
-	 * @see TargetFile
+	
+	/* (non-Javadoc)
+	 * @see fr.esiea.CanadianLoggerjack.TargetFactory#getTarget()
 	 */
 	@Override
 	public Target getTarget() throws InvalidConfigurationException {
