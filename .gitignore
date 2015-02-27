@@ -11,7 +11,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /bin/
-/doc/
+
 /loggerFile.log
 /customLog.log
 /customRollLog.log
@@ -19,3 +19,13 @@ hs_err_pid*
 /rollover_file.log
 /coucou.log
 /tester.log
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
