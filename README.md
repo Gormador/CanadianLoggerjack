@@ -66,7 +66,7 @@ You can set it with
 
 ```java
 	config.setErrorLevel(INFO);
-	```
+```
 	
 The default value is *ERROR*.
 
