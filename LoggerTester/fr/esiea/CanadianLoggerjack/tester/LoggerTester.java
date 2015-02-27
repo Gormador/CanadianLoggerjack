@@ -13,6 +13,9 @@ public class LoggerTester
 		
 		System.out.println("\nTesting roll log to file.");
 		new RolloverFileTester();
+		
+		System.out.println("\nTesting with custom config.");
+		new PropertiesTester();
 	}
 
 }

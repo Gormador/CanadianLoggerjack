@@ -28,31 +28,58 @@ public class TargetRolloverFileFactory extends TargetFactory {
 	@Override
 	public Target getTarget(String props) throws InvalidConfigurationException {
 		
-		targetProperties = props.split(";");
+		this.targetProperties = props.split(";");
 		
-		if (targetProperties.length==0) throw (new InvalidConfigurationException());
+		if (targetProperties.length == 0) throw (new InvalidConfigurationException());
 		
-		if(!(targetProperties[0].length() == 0) && !(targetProperties[1].length() == 0))
-		{
-			this.name = targetProperties[0];
-			this.maxSize = Integer.parseInt(targetProperties[1]);
-			
-			return (new TargetRolloverFile(name, maxSize));
-		}
-		else if ((targetProperties[0].length() == 0) && !(targetProperties[1].length() == 0))
-		{
-			this.maxSize = Integer.parseInt(targetProperties[1]);
-			
-			return (new TargetRolloverFile(maxSize));
-		}
-		else if (!(targetProperties[0].length() == 0) && (targetProperties[1].length() == 0))
+		System.out.println(targetProperties.length);
+		System.out.println(targetProperties[0]+";"+targetProperties[1]);
+		System.out.println(targetProperties[0].length());
+		
+		if (targetProperties.length == 1)
 		{
 			this.name = targetProperties[0];
 			
 			return (new TargetRolloverFile(name));
 		}
 		else
+		{
+			if(!(targetProperties[0].length() == 0) && !(targetProperties[1].length() == 0))
+			{
+				this.name = targetProperties[0];
+				this.maxSize = Integer.parseInt(targetProperties[1]);
+				
+				return (new TargetRolloverFile(name, maxSize));
+			}
+			else if ((targetProperties[0].length() == 0) && !(targetProperties[1].length() == 0))
+			{
+				this.maxSize = Integer.parseInt(targetProperties[1]);
+				
+				return (new TargetRolloverFile(maxSize));
+			}
+			
 			return (this.getTarget());
+		}
+//				if(!(targetProperties[0].length() == 0) && !(targetProperties[1].length() == 0))
+//				{
+//					this.name = targetProperties[0];
+//					this.maxSize = Integer.parseInt(targetProperties[1]);
+//					
+//					return (new TargetRolloverFile(name, maxSize));
+//				}
+//				else if ((targetProperties[0].length() == 0) && !(targetProperties[1].length() == 0))
+//				{
+//					this.maxSize = Integer.parseInt(targetProperties[1]);
+//					
+//					return (new TargetRolloverFile(maxSize));
+//				}
+//				else if (!(targetProperties[0].length() == 0) && (targetProperties[1].length() == 0))
+//				{
+//					this.name = targetProperties[0];
+//					
+//					return (new TargetRolloverFile(name));
+//				}
+
 	}
 
 	/**
