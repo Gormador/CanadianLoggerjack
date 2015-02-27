@@ -22,6 +22,7 @@ public abstract class TargetFactory {
 	
 	/**
 	 * This method sets the properties for the target when it is configured from a properties file.
+	 * 
 	 * <br>This method is call when no parameters are set in the config file.
 	 * <br>If your class cannot be instantiated without parameter, please always throw an <code>InvalidConfigurationException</code>.
 	 * 

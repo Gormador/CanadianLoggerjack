@@ -6,6 +6,9 @@ import fr.esiea.CanadianLoggerjack.TargetFactory;
 
 public class TargetFileFactory extends TargetFactory {
 
+	String[] params = null;
+	String name = null;
+	
 	public TargetFileFactory() {
 
 	}
@@ -22,9 +25,13 @@ public class TargetFileFactory extends TargetFactory {
 	@Override
 	public Target getTarget(String props) throws InvalidConfigurationException {
 		
-		if (props.length() == 0) throw (new InvalidConfigurationException());
+		this.params = props.split(";");
 		
-		return(new TargetFile(props));	
+		if (props.length() == 0 || params.length > 1) throw (new InvalidConfigurationException());
+		
+		this.name = params[0];
+		
+		return(new TargetFile(name));	
 	}
 	
 	

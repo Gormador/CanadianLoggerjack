@@ -12,7 +12,7 @@ public interface Target {
 	
 	
 	/**
-	 * This method must record the message on the medium.
+	 * This method record the message on the medium.
 	 *
 	 * @param message The message to be recorded.
 	 */
