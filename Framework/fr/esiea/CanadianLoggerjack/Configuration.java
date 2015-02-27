@@ -5,9 +5,10 @@ package fr.esiea.CanadianLoggerjack;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Properties;
@@ -52,17 +53,73 @@ public class Configuration {
 	 * TODO couplé à l'implémentation de la lecture des properties
 	 * 
 	 * @param configFile The configuration file.
-	 * @throws FileNotFoundException Throws an exception if it is raised when opening the file.
+	 * @throws InvalidConfigurationException If something goes wrong while parsing the config file, or instantiating with the specified parameters.
+	 * @throws IOException If a problem occurs while reading the config file.
+	 * @throws ClassNotFoundException If the specified class in the config file is not found  
+	 * @throws SecurityException Sometimes, you will not be able to instantiate a new class
+	 * @throws NoSuchMethodException This exception is raised when there is a bad implementation 
+	 * @throws InvocationTargetException This exception is raised when there is a bad implementation
+	 * @throws IllegalArgumentException This exception is raised when there is a bad implementation
+	 * @throws IllegalAccessException This exception is raised when there is a bad implementation
+	 * @throws InstantiationException This exception is raised when there is a bad implementation
 	 */
-	public Configuration(File configFile) throws FileNotFoundException /* TODO, BadConfigException */{
+	public Configuration(File configFile) throws InvalidConfigurationException, IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException   {
+		
 		
 		Properties props = new Properties();
 		InputStream is = null;
 		
 		is = new FileInputStream(configFile);
 		
-		// TODO Load properties  
+		  
+		props.load(is);
 		
+		
+		for(Object ob :  props.keySet()){
+			
+			String s = (String) ob;
+			if(!s.endsWith("logLevel") && !s.endsWith("formator") && !s.endsWith("targetsFactories") && !s.endsWith("params")){
+				//okay, we have a class name here.
+				
+				
+				
+				//is there any loglevel ?
+				if(props.containsKey(s+".logLevel")){
+					this.setLevel(Class.forName(s), ErrorLevel.valueOf(props.getProperty(s+".logLevel")));
+				}
+				if (props.containsKey(s+".formator")){
+					String formName = props.getProperty(s+".formator");
+					Class<?> f = Class.forName(formName);
+					Constructor<?> constructor = f.getConstructor(String.class);
+					Object instance = constructor.newInstance(s);
+					this.setLayout(Class.forName(s), (Formator) instance);
+				}
+				
+				if(props.containsKey(s+".targetsFactories")){
+					
+					for(String factoryName : props.getProperty(s+".targetsFactories").split(";")){
+						
+						
+						//lets call the Factory
+						TargetFactory factory = (TargetFactory) Class.forName(factoryName).newInstance();
+						Target t = null;
+						
+						if(props.containsKey(s+"."+factoryName+".params")){
+							//if parameters are defined, lets call with args
+							t = factory.getTarget(props.getProperty(s+"."+factoryName+".params"));
+						}
+						else{//or without args
+							t = factory.getTarget();
+						}
+						this.addTarget(Class.forName(s), t);
+					}
+				}
+			}
+		}
+		
+		
+		
+		//TODO pour chaque class, générer le Formator en appelant le constructeur Formateur(String className)
 		try {
 			is.close();
 		} catch (IOException e) {
@@ -113,7 +170,7 @@ public class Configuration {
 	 * @param layout The layout that will be applied on all targets.
 	 */
 	@SuppressWarnings("rawtypes")
-	public void setLevel(Class sClass, Formator layout){
+	public void setLayout(Class sClass, Formator layout){
 		layouts.put(sClass, layout);	
 	}
 	

@@ -3,8 +3,6 @@
  */
 package fr.esiea.CanadianLoggerjack;
 
-import java.util.Properties;
-
 /**
  * Each Target must implement this interface.
  * 

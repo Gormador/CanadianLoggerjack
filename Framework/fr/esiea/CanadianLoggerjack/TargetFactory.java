@@ -1,6 +1,5 @@
 package fr.esiea.CanadianLoggerjack;
 
-import java.util.Properties;
 
 public abstract class TargetFactory {
 	

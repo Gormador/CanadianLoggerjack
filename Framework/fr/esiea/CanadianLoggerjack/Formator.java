@@ -9,6 +9,7 @@ package fr.esiea.CanadianLoggerjack;
  */
 public abstract class Formator {
 	
+	@SuppressWarnings("unused")
 	private String loggerName;
 	
 	/**
