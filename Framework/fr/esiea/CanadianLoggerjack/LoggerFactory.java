@@ -24,7 +24,7 @@ public class LoggerFactory {
 	private HashMap<Class, Formator> layouts;
 	
 	/**
-	 * Instantiate a <code>LoggerFactory</code> with the parameters specified in the properties file.
+	 * Instantiates a <code>LoggerFactory</code> with the parameters specified in the properties file.
 	 * 
 	 * @param config The configuration for the LoggerFactory
 	 * @see Configuration
@@ -41,7 +41,7 @@ public class LoggerFactory {
 	
 	
 	/**
-	 * Instantiate a <code>Logger</code>, configured for the specified class according <code>Configuration</code> settings.
+	 * Instantiates a <code>Logger</code>, configured for the specified class according <code>Configuration</code> settings.
 	 * 
 	 * 
 	 * @param sClass The specified class
