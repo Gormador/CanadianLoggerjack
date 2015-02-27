@@ -7,7 +7,7 @@ import fr.esiea.CanadianLoggerjack.TargetFactory;
 public class TargetFileFactory extends TargetFactory {
 
 	public TargetFileFactory() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	
@@ -17,7 +17,7 @@ public class TargetFileFactory extends TargetFactory {
 	@Override
 	public Target getTarget(String props) throws InvalidConfigurationException {
 		
-		
+		if (props.length() == 0) throw (new InvalidConfigurationException());
 		
 		return(new TargetFile(props));
 		
