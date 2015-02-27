@@ -85,11 +85,13 @@ public class TargetRolloverFile implements Target{
 			if(fileSize < this.maxSize){
 				fileWriter = new FileWriter(file, true);
 				fileWriter.write(message);
+				fileWriter.write("\n");
 				fileWriter.close();
 			}
 			else if (fileSize == this.maxSize){
 				fileWriter = new FileWriter(file, true);
 				fileWriter.write(message);
+				fileWriter.write("\n");
 				fileWriter.close();
 				newName = new File(new SimpleDateFormat(name + "yyyy/MM/dd_HH-mm-ss").format(new Date()).toString() + ".txt");
 				file.renameTo(newName);
@@ -99,6 +101,7 @@ public class TargetRolloverFile implements Target{
 				file.renameTo(newName);
 				fileWriter = new FileWriter(file, true);
 				fileWriter.write(message);
+				fileWriter.write("\n");
 				fileWriter.close();
 			}
 		} catch (IOException e) {

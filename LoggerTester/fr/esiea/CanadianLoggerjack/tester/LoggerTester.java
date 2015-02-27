@@ -10,6 +10,9 @@ public class LoggerTester
 		
 		System.out.println("\nTesting log to file.");
 		new FileTester();
+		
+		System.out.println("\nTesting roll log to file.");
+		new RolloverFileTester();
 	}
 
 }

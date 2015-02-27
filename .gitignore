@@ -14,3 +14,6 @@ hs_err_pid*
 /doc/
 /loggerFile.log
 /customLog.log
+/customRollLog.log
+/customSizeRollLog.log
+/rollover_file.log
