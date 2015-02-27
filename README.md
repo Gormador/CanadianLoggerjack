@@ -80,9 +80,9 @@ If you do not specify a formatter, you will use the default one.
 
 A Target is a mean to store the log. There are several targets :
 
-*fr.esiea.CanadianLoggerjack.impl.TargetConsole* the simplest _default_ parameter: the console
-*fr.esiea.CanadianLoggerjack.impl.TargetFile* Record into a file
-*fr.esiea.CanadianLoggerjack.impl.TargetRolloverFile* Record into a file, and create a new file when the size limit is reached
+*fr.esiea.CanadianLoggerjack.impl.TargetConsole*: the simplest _default_ parameter: the console
+*fr.esiea.CanadianLoggerjack.impl.TargetFile*: Record into a file
+*fr.esiea.CanadianLoggerjack.impl.TargetRolloverFile*: Record into a file, and create a new file when the size limit is reached
 
 Please refer to the javadoc in order to know how to build your target. Some of them have interesting parameters, modifying their behaviour.
 
