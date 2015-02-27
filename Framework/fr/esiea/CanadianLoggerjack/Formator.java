@@ -10,13 +10,13 @@ package fr.esiea.CanadianLoggerjack;
 public abstract class Formator {
 	
 	@SuppressWarnings("unused")
-	private String loggerName;
+	protected String loggerName;
 	
 	/**
 	 * Default constructor.
 	 */
 	public Formator(String loggerName){
-		this.loggerName = loggerName;
+		
 	}
 	
 	/**

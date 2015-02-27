@@ -22,7 +22,9 @@ public class DefaultFormator extends Formator {
 	 * @param loggerName The name of the logger
 	 */
 	public DefaultFormator(String loggerName){
-		super(loggerName);
+		super(loggerName); // USELESS
+		this.loggerName = loggerName;
+//		System.out.println(super.loggerName);
 	}
 	
 	/**

@@ -43,7 +43,9 @@ public class Configuration {
 	 *  @see TargetConsole
 	 */
 	public Configuration(){
-		
+		targets = new HashMap<Class, LinkedList<Target>>();
+		errLevels = new HashMap<Class, ErrorLevel>();
+		layouts = new HashMap<Class, Formator>();
 	}
 	
 	/**
