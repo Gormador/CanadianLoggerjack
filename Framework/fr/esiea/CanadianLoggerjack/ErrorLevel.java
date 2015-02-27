@@ -1,13 +1,22 @@
 package fr.esiea.CanadianLoggerjack;
 
 /**
- * 	// TODO javadoc
+ * The different types of error levels, in order from the less verbose to the most.	
  * 
  */
 enum ErrorLevel {
+	/* FATAL, */
+	/**
+	 *	ERROR Level. 
+	 */
 	ERROR,
 	/* WARN, */
-	DEBUG,
-	INFO
-
+	/**
+	 * INFO Level.
+	 */
+	INFO,
+	/**
+	 *	DEBUG Level. 
+	 */
+	DEBUG
 }

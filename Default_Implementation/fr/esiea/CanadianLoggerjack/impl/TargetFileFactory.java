@@ -9,18 +9,22 @@ public class TargetFileFactory extends TargetFactory {
 	public TargetFileFactory() {
 
 	}
-
 	
-	/* (non-Javadoc)
+	/**
+	 * (non-Javadoc)
 	 * @see fr.esiea.CanadianLoggerjack.TargetFactory#getTarget(java.lang.String)
+	 * 
+	 * @param props Specifies the log filename.
+	 * @throws InvalidConfigurationException If the string is empty.
+	 * 
+	 * @return An instance of TargetFile constructed with the proper parameter.
 	 */
 	@Override
 	public Target getTarget(String props) throws InvalidConfigurationException {
 		
 		if (props.length() == 0) throw (new InvalidConfigurationException());
 		
-		return(new TargetFile(props));
-		
+		return(new TargetFile(props));	
 	}
 	
 	

@@ -15,12 +15,15 @@ public class TargetRolloverFileFactory extends TargetFactory {
 	}
 	
 	/** 
+	 * Instantiates a TargetRolloverFile object.
 	 * 
 	 * @param props Must contain a log file name and / or a max size for the file. 
 	 * <br>.properties file structure: TargetRolloverFileFactory.params = "[name]";[size]
 	 * <br>The order of the parameters is important. If no name is specified, leave the semicolon (;[size]).
 	 * 
 	 * @return An instance of a TargetRolloverFile object, constructed with the proper parameter(s).
+	 * 
+	 * @throws InvalidConfigurationException If the given parameter is empty.
 	 */
 	@Override
 	public Target getTarget(String props) throws InvalidConfigurationException {
@@ -53,6 +56,8 @@ public class TargetRolloverFileFactory extends TargetFactory {
 	}
 
 	/**
+	 * Instantiates a TargetRolloverFile object.
+	 * 
 	 * @return An instance of a default TargetRolloverFile object.
 	 */
 	@Override

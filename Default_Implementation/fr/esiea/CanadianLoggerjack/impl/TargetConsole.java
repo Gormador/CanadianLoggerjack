@@ -22,7 +22,8 @@ public class TargetConsole implements Target {
 	
 	/**
 	 * Displays the message in the console
-	 * @param message The message that will be display
+	 * 
+	 * @param message The message to display
 	 */
 	@Override
 	public void record(String message) {		

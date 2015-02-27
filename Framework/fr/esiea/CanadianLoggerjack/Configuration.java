@@ -49,8 +49,9 @@ public class Configuration {
 	/**
 	 * Uses the configuration specified in the properties file in parameter
 	 * 
-	 * DOCUMENTATION DU FICHIER PROPERTIES :
-	 * TODO couplé à l'implémentation de la lecture des properties
+	 * HOW TO BUILD THE .properties FILE
+	 * See the Default_Implementation/resources/loggerConfig.properties file for details
+	 * 
 	 * 
 	 * @param configFile The configuration file.
 	 * @throws InvalidConfigurationException If something goes wrong while parsing the config file, or instantiating with the specified parameters.
@@ -65,23 +66,18 @@ public class Configuration {
 	 */
 	public Configuration(File configFile) throws InvalidConfigurationException, IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException   {
 		
-		
 		Properties props = new Properties();
 		InputStream is = null;
 		
-		is = new FileInputStream(configFile);
-		
+		is = new FileInputStream(configFile);		
 		  
 		props.load(is);
-		
 		
 		for(Object ob :  props.keySet()){
 			
 			String s = (String) ob;
 			if(!s.endsWith("logLevel") && !s.endsWith("formator") && !s.endsWith("targetsFactories") && !s.endsWith("params")){
-				//okay, we have a class name here.
-				
-				
+				//okay, we have a class name here.	
 				
 				//is there any loglevel ?
 				if(props.containsKey(s+".logLevel")){
@@ -97,8 +93,7 @@ public class Configuration {
 				
 				if(props.containsKey(s+".targetsFactories")){
 					
-					for(String factoryName : props.getProperty(s+".targetsFactories").split(";")){
-						
+					for(String factoryName : props.getProperty(s+".targetsFactories").split(";")) {					
 						
 						//lets call the Factory
 						TargetFactory factory = (TargetFactory) Class.forName(factoryName).newInstance();
@@ -117,20 +112,16 @@ public class Configuration {
 			}
 		}
 		
-		
-		
-		//TODO pour chaque class, générer le Formator en appelant le constructeur Formateur(String className)
 		try {
 			is.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
 	/**
-	 * Add a target to a class
-	 * Using it for the first time overwrite the default value
+	 * Adds a target to a class
+	 * Using it for the first time overwrites the default value
 	 * 
 	 * 
 	 * @param sClass The specified class
@@ -150,7 +141,7 @@ public class Configuration {
 	}
 	
 	/**
-	 * Set the error level for this class.
+	 * Sets the error level for this class.
 	 * <br> If an error level was already specified, it will be overwritten by the new value.
 	 * 
 	 * @param sClass The specified class
@@ -163,7 +154,7 @@ public class Configuration {
 	}
 	
 	/**
-	 * Set the layout for this class.
+	 * Sets the layout for this class.
 	 * <br> If a layout was already specified, it will be overwritten by the new value.
 	 * 
 	 * @param sClass The specified class.

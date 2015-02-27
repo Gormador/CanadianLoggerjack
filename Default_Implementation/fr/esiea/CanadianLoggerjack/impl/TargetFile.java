@@ -21,7 +21,7 @@ public class TargetFile implements Target {
 	private File file;
 	
 	/**
-	 * Create a file with default name: <code>loggerFile.log</code>
+	 * Creates a file with the default name: <code>loggerFile.log</code>
 	 * 
 	 */
 	public TargetFile(){
@@ -29,16 +29,18 @@ public class TargetFile implements Target {
 	}
 	
 	/**
-	 * Create a file with the specified name.
-	 * @param name The file will be <code>name.log</code>
+	 * Creates a file with a specified name.
+	 * 
+	 * @param name The file will be named <code>name.log</code>.
 	 */
 	public TargetFile(String name){
 		this.file = new File(name + ".log");
 	}
 	
 	/**
-	 * Append the message into the file.
-	 * @param message The message to be recorded
+	 * Appends the message into the file.
+	 * 
+	 * @param message The message to record.
 	 */
 	@Override
 	public void record(String message) {

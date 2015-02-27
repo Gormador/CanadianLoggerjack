@@ -12,7 +12,7 @@ import java.util.Date;
 import fr.esiea.CanadianLoggerjack.Target;
 
 /**
- * Save messages in a rollover file.
+ * Saves messages in a rollover file.
  * <br> When the file reaches a certain size, a new file is created automatically.
  * 
  */
@@ -25,40 +25,40 @@ public class TargetRolloverFile implements Target{
 	
 	
 	/**
-	 * Create a rollover file with default values:
-	 * <br> name = rollover_file
-	 * <br> max size of the file = 10MB (10 * 1024)
+	 * Creates a rollover file with default values:
+	 * <br> name: rollover_file.log
+	 * <br> max size of the file: 10MB
 	 */
 	public TargetRolloverFile(){
 		this.maxSize = 10 * 1024;
 		this.name = "rollover_file";
-		file = new File(name + ".txt");
+		file = new File(name + ".log");
 	}
 	
 	/**
-	 * Create a rollover file with a default maxSize and a chosen name
+	 * Creates a rollover file with a default maxSize and a chosen name
 	 * 
 	 * @param name The name of the file
 	 */
 	public TargetRolloverFile(String name){
 		this.maxSize = 10 * 1024;
 		this.name = name;
-		file = new File(name + ".txt");
+		file = new File(name + ".log");
 	}
 	
 	/**
-	 * Create a rollover file with a chosen maxSize and a default name
+	 * Creates a rollover file with a chosen maxSize and a default name
 	 * 
 	 * @param maxSize The maximum size of the file in kB.
 	 */
 	public TargetRolloverFile(int maxSize){
 		this.maxSize = maxSize * 1024;
 		this.name = "rollover_file";
-		file = new File(name + ".txt");
+		file = new File(name + ".log");
 	}
 	
 	/**
-	 * Create a rollover file with a chosen maxSize and a chosen name
+	 * Creates a rollover file with a chosen maxSize and a chosen name
 	 * 
 	 * @param name The name of the file
 	 * @param maxSize The maximum size of the file
@@ -66,12 +66,12 @@ public class TargetRolloverFile implements Target{
 	public TargetRolloverFile(String name, int maxSize){
 		this.maxSize = maxSize * 1024;
 		this.name = name;
-		file = new File(name + ".txt");
+		file = new File(name + ".log");
 	}
 	
 	
 	/**
-	 * Save a message in a rollover file
+	 * Saves a message in a rollover file
 	 * 
 	 * @param message The message that will be saved in the rollover file
 	 */

@@ -17,7 +17,8 @@ public class DefaultFormator extends Formator {
 	private String loggerName;
 	
 	/**
-	 * Create a formator, with the name of the logger
+	 * Creates a formator, with the name of the logger
+	 * 
 	 * @param loggerName The name of the logger
 	 */
 	public DefaultFormator(String loggerName){
@@ -25,7 +26,8 @@ public class DefaultFormator extends Formator {
 	}
 	
 	/**
-	 * Return the format for the error level 'ERROR'
+	 * Returns the format for the error level 'ERROR'
+	 * 
 	 * @param message The message to display
 	 */
 	@Override
@@ -34,7 +36,8 @@ public class DefaultFormator extends Formator {
 	}
 	
 	/**
-	 * Return the format for the error level 'INFO'
+	 * Returns the format for the error level 'INFO'
+	 * 
 	 * @param message The message to display
 	 */
 	@Override
@@ -43,7 +46,8 @@ public class DefaultFormator extends Formator {
 	}
 
 	/**
-	 * Return the format for the error level 'DEBUG'
+	 * Returns the format for the error level 'DEBUG'
+	 * 
 	 * @param message The message to display
 	 */
 	@Override
@@ -52,9 +56,10 @@ public class DefaultFormator extends Formator {
 	}
 	
 	/**
-	 * Return the format for the error in parameter
+	 * Returns the format for the error in parameter
+	 * 
 	 * @param message The message to display
-	 * @param errorLevel The error level of the message
+	 * @param errorLevel The log level of the message
 	 */
 	private String formatCommon(String message, String errorLevel){
 		String date;
