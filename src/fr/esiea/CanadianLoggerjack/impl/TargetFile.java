@@ -12,12 +12,17 @@ import fr.esiea.CanadianLoggerjack.Target;
 /**
  * Record the log into a file. 
  * 
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
+ * 
  * @see Target
  */
 public class TargetFile implements Target {
 
 	
 	
+	/**
+	 * 
+	 */
 	private File file;
 	
 	/**

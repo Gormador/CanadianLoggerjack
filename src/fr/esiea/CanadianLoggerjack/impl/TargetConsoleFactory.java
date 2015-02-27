@@ -9,6 +9,7 @@ import fr.esiea.CanadianLoggerjack.TargetFactory;
 /**
  * Implements TargetFactory for the Console implementation of the Target interface.
  *
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
  */
 public class TargetConsoleFactory extends TargetFactory {
 
@@ -26,6 +27,9 @@ public class TargetConsoleFactory extends TargetFactory {
 		return new TargetConsole();
 	}
 
+	/* (non-Javadoc)
+	 * @see fr.esiea.CanadianLoggerjack.TargetFactory#getTarget()
+	 */
 	@Override
 	public Target getTarget() throws InvalidConfigurationException {
 		

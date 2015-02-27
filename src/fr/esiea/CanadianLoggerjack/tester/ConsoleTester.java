@@ -5,8 +5,17 @@ import fr.esiea.CanadianLoggerjack.ErrorLevel;
 import fr.esiea.CanadianLoggerjack.Logger;
 import fr.esiea.CanadianLoggerjack.LoggerFactory;
 
+/**
+ * Console logger tester class.
+ * 
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
+ *
+ */
 public class ConsoleTester
 {
+	/**
+	 * 
+	 */
 	public ConsoleTester()
 	{
 		Configuration conf = new Configuration();

@@ -9,7 +9,9 @@ import static fr.esiea.CanadianLoggerjack.ErrorLevel.*;
 
 /**
  * Logger
- * Only a <code>LoggerFactory</code> can instantiate this object.
+ * <br>Only a <code>LoggerFactory</code> can instantiate this object.
+ * 
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
  * 
  * LogLevel hierarchy (from less to most verbose): <code>ERROR</code>, <code>DEBUG</code>, <code>INFO</code>. 
  */

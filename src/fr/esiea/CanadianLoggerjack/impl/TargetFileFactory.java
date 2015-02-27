@@ -4,11 +4,26 @@ import fr.esiea.CanadianLoggerjack.InvalidConfigurationException;
 import fr.esiea.CanadianLoggerjack.Target;
 import fr.esiea.CanadianLoggerjack.TargetFactory;
 
+/**
+ * A factory used to build a TargetFile.
+ * 
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
+ */
 public class TargetFileFactory extends TargetFactory {
 
-	String[] params = null;
-	String name = null;
+	/**
+	 * The given parameters for the target in the .properties file.
+	 */
+	private String[] params = null;
 	
+	/**
+	 * The file name.
+	 */
+	private String name = null;
+	
+	/**
+	 *  Default constructor. Dummy.
+	 */
 	public TargetFileFactory() {
 
 	}

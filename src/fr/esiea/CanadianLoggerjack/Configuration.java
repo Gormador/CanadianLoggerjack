@@ -17,18 +17,29 @@ import fr.esiea.CanadianLoggerjack.impl.TargetConsole;
 
 /**
  * Configure a <code>LoggerFactory</code>
+ * 
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
  *
- *@see LoggerFactory
+ * @see LoggerFactory
  */
 public class Configuration {
 
 	
+	/**
+	 * The Targets HashMap
+	 */
 	@SuppressWarnings("rawtypes") 
 	HashMap<Class, LinkedList<Target>> targets;
 	
+	/**
+	 * The LogLevel HashMap
+	 */
 	@SuppressWarnings("rawtypes")
 	HashMap<Class, ErrorLevel> errLevels;
 	
+	/**
+	 * The Layout HashMap
+	 */
 	@SuppressWarnings("rawtypes")
 	HashMap<Class, Formator> layouts;
 	
@@ -83,10 +94,9 @@ public class Configuration {
 			String s = (String) ob;
 			if(!s.endsWith("logLevel") && !s.endsWith("formator") && !s.endsWith("targetsFactories") && !s.endsWith("params")){
 				//okay, we have a class name here.	
-//				System.out.println(s);
+
 				//is there any loglevel ?
 				if(props.containsKey(s+".logLevel")){
-//					System.out.println(ErrorLevel.valueOf(props.getProperty(s+".logLevel")));
 					this.setLevel(Class.forName(s), ErrorLevel.valueOf(props.getProperty(s+".logLevel")));
 				}
 				if (props.containsKey(s+".formator")){

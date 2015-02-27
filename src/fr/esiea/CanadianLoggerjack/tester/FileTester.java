@@ -6,9 +6,18 @@ import fr.esiea.CanadianLoggerjack.Logger;
 import fr.esiea.CanadianLoggerjack.LoggerFactory;
 import fr.esiea.CanadianLoggerjack.impl.TargetFile;
 
+/**
+ * File logger tester class.
+ * 
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
+ *
+ */
 public class FileTester
 {
 
+	/**
+	 * Default constructor
+	 */
 	public FileTester()
 	{
 		Configuration conf = new Configuration();

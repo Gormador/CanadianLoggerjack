@@ -6,9 +6,17 @@ import fr.esiea.CanadianLoggerjack.Logger;
 import fr.esiea.CanadianLoggerjack.LoggerFactory;
 import fr.esiea.CanadianLoggerjack.impl.TargetRolloverFile;
 
+/**
+ * Rollover file logger tester class.
+ * 
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
+ */
 public class RolloverFileTester
 {
 
+	/**
+	 * Def constructor.
+	 */
 	public RolloverFileTester()
 	{
 		Configuration conf = new Configuration();

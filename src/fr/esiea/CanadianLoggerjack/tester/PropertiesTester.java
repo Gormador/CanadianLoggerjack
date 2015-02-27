@@ -9,8 +9,16 @@ import fr.esiea.CanadianLoggerjack.InvalidConfigurationException;
 import fr.esiea.CanadianLoggerjack.Logger;
 import fr.esiea.CanadianLoggerjack.LoggerFactory;
 
+/**
+ * Logger tester. With custom .properties file.
+ * 
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
+ */
 public class PropertiesTester
 {
+	/**
+	 * Def constructor.
+	 */
 	public PropertiesTester()
 	{
 		File f = new File("src/resources/loggerConfig.properties");

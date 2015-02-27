@@ -11,6 +11,7 @@ import fr.esiea.CanadianLoggerjack.Formator;
 /**
  * Displays the date / time, the name of the logger, the message level error and the message.
  *
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
  */
 public class DefaultFormator extends Formator {
 	

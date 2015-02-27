@@ -5,7 +5,8 @@ package fr.esiea.CanadianLoggerjack;
 
 /**
  * Each Target must implement this interface.
- * 
+ *
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
  */
 public interface Target {
 

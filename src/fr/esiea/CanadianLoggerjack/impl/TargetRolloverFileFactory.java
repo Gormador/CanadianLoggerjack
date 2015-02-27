@@ -4,12 +4,20 @@ import fr.esiea.CanadianLoggerjack.InvalidConfigurationException;
 import fr.esiea.CanadianLoggerjack.Target;
 import fr.esiea.CanadianLoggerjack.TargetFactory;
 
+/**
+ * A factory used to build a rollover log file.
+ * 
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
+ */
 public class TargetRolloverFileFactory extends TargetFactory {
 	
-	String[] targetProperties = null;
-	String name = null;
-	int maxSize = 1024;
+	private String[] targetProperties = null;
+	private String name = null;
+	private int maxSize = 1024;
 	
+	/**
+	 * Default constructor. Dummy.
+	 */
 	public TargetRolloverFileFactory() {
 		
 	}

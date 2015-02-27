@@ -15,6 +15,7 @@ import fr.esiea.CanadianLoggerjack.Target;
  * Saves messages in a rollover file.
  * <br> When the file reaches a certain size, a new file is created automatically.
  * 
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
  */
 public class TargetRolloverFile implements Target{
 

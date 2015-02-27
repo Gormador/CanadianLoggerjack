@@ -11,7 +11,9 @@ import fr.esiea.CanadianLoggerjack.impl.TargetConsole;
 
 
 /**
+ * The LoggerFactory. Used to build the logger.
  * 
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
  *
  */
 public class LoggerFactory {

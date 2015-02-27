@@ -6,13 +6,19 @@ package fr.esiea.CanadianLoggerjack;
 /**
  * Message formator
  *
+ * @author M. Bougeret &amp; L. Cousi &amp; G. Philippot
  */
 public abstract class Formator {
 	
+	/**
+	 * The current logger name.
+	 */
 	protected String loggerName;
 	
 	/**
 	 * Default constructor.
+	 *
+	 * @param loggerName The current logger in use.
 	 */
 	public Formator(String loggerName){
 		
