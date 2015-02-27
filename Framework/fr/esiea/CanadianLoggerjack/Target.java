@@ -3,12 +3,15 @@
  */
 package fr.esiea.CanadianLoggerjack;
 
+import java.util.Properties;
+
 /**
  * Each Target must implement this interface.
  * 
  */
 public interface Target {
 
+	
 	
 	/**
 	 * This method must record the message on the medium.

@@ -2,7 +2,7 @@ package fr.esiea.CanadianLoggerjack;
 
 import java.util.Properties;
 
-abstract class TargetFactory {
+public abstract class TargetFactory {
 	
 	/**
 	 * This is the default constructor for the factory.
