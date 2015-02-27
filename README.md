@@ -1,2 +1,2 @@
 # CanadianLoggerjack
-A simple logging system for Java applications.
+A logging system for Java applications.
