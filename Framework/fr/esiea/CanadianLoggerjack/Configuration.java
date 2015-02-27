@@ -42,6 +42,7 @@ public class Configuration {
 	 *  
 	 *  @see TargetConsole
 	 */
+	@SuppressWarnings("rawtypes")
 	public Configuration(){
 		targets = new HashMap<Class, LinkedList<Target>>();
 		errLevels = new HashMap<Class, ErrorLevel>();
@@ -68,6 +69,8 @@ public class Configuration {
 	 */
 	public Configuration(File configFile) throws InvalidConfigurationException, IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException   {
 		
+		this();
+		
 		Properties props = new Properties();
 		InputStream is = null;
 		
@@ -80,9 +83,10 @@ public class Configuration {
 			String s = (String) ob;
 			if(!s.endsWith("logLevel") && !s.endsWith("formator") && !s.endsWith("targetsFactories") && !s.endsWith("params")){
 				//okay, we have a class name here.	
-				
+//				System.out.println(s);
 				//is there any loglevel ?
 				if(props.containsKey(s+".logLevel")){
+//					System.out.println(ErrorLevel.valueOf(props.getProperty(s+".logLevel")));
 					this.setLevel(Class.forName(s), ErrorLevel.valueOf(props.getProperty(s+".logLevel")));
 				}
 				if (props.containsKey(s+".formator")){
