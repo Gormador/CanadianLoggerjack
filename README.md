@@ -117,7 +117,7 @@ Please ignore the brackets[] and braces{}, they are here for educational purpose
 Between the square brackets there *must* be a class name.  
 Between the curly braces there *must* be a String.  
 
-```ìni
+```ini
     [TheFirstClassYouWantToLog]
     [TheFirstClassYouWantToLog].loglevel = {LOGLEVEL for this class}
     [TheFirstClassYouWantToLog].formator = [TheFormatorClassYouWant for this class]
