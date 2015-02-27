@@ -30,15 +30,11 @@ public class LoggerFactory {
 	 * @see Configuration
 	 */
 	@SuppressWarnings("rawtypes")
-	public LoggerFactory(Configuration config){
-		this.targets = new HashMap<Class, LinkedList<Target>>(config.targets);
-		this.errLevels = new HashMap<Class, ErrorLevel>(config.errLevels);
-		this.layouts = new HashMap<Class, Formator>(config.layouts);
+	public LoggerFactory(Configuration config) {		
+		this.targets = (config.targets == null) ?  new HashMap<Class, LinkedList<Target>>() : new HashMap<Class, LinkedList<Target>>(config.targets);
+		this.errLevels = (config.errLevels == null) ? new HashMap<Class, ErrorLevel>() : new HashMap<Class, ErrorLevel>(config.errLevels);
+		this.layouts = (config.layouts == null) ? new HashMap<Class, Formator>() : new HashMap<Class, Formator>(config.layouts);
 	}
-	
-	
-	
-	
 	
 	/**
 	 * Instantiates a <code>Logger</code>, configured for the specified class according <code>Configuration</code> settings.
@@ -64,7 +60,7 @@ public class LoggerFactory {
 		
 		errLv = this.errLevels.containsKey(sClass) ? this.errLevels.get(sClass) : ErrorLevel.ERROR;
 		
-		f = this.layouts.containsKey(sClass) ? this.layouts.get(sClass) : new DefaultFormator(sClass.getName());;
+		f = this.layouts.containsKey(sClass) ? this.layouts.get(sClass) : new DefaultFormator(sClass.getName());
 			
 		
 		return (new Logger(f, t, errLv));

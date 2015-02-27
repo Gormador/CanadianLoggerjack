@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="Default_Implementation"/>
 	<classpathentry kind="src" path="Framework"/>
+	<classpathentry kind="src" path="LoggerTester"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -4,7 +4,7 @@ package fr.esiea.CanadianLoggerjack;
  * The different types of error levels, in order from the less verbose to the most.	
  * 
  */
-enum ErrorLevel {
+public enum ErrorLevel {
 	/* FATAL, */
 	/**
 	 *	ERROR Level. 
