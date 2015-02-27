@@ -47,6 +47,7 @@ public class TargetFile implements Target {
 		try {
 			FileWriter fileWriter = new FileWriter(this.file, true);
 			fileWriter.write(message);
+			fileWriter.write("\n");
 			fileWriter.close();
 		} catch (IOException e) {
 			e.printStackTrace();
