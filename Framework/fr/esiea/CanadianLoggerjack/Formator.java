@@ -7,8 +7,17 @@ package fr.esiea.CanadianLoggerjack;
  * Message formator
  *
  */
-public abstract interface Formator {
-
+public abstract class Formator {
+	
+	private String loggerName;
+	
+	/**
+	 * Default constructor.
+	 */
+	public Formator(String loggerName){
+		this.loggerName = loggerName;
+	}
+	
 	/**
 	 * Formats a message of type <code>ERROR</code>.
 	 * 

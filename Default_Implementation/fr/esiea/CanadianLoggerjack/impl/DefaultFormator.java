@@ -12,7 +12,7 @@ import fr.esiea.CanadianLoggerjack.Formator;
  * Displays the date / time, the name of the logger, the message level error and the message.
  *
  */
-public class DefaultFormator implements Formator {
+public class DefaultFormator extends Formator {
 	
 	private String loggerName;
 	
@@ -21,7 +21,7 @@ public class DefaultFormator implements Formator {
 	 * @param loggerName The name of the logger
 	 */
 	public DefaultFormator(String loggerName){
-		this.loggerName = loggerName;
+		super(loggerName);
 	}
 	
 	/**
