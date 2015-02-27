@@ -13,7 +13,7 @@ public class PropertiesTester
 {
 	public PropertiesTester()
 	{
-		File f = new File("Default_Implementation/resources/loggerConfig.properties");
+		File f = new File("src/resources/loggerConfig.properties");
 		
 		Configuration conf = null;
 		try
