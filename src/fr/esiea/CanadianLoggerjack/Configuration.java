@@ -50,7 +50,7 @@ public class Configuration {
 	}
 	
 	/**
-	 * Uses the configuration specified in the properties file in parameter
+	 * Uses the configuration specified in the properties file in parameter.
 	 * 
 	 * HOW TO BUILD THE .properties FILE
 	 * See the Default_Implementation/resources/loggerConfig.properties file for details
